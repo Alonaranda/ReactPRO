@@ -1,0 +1,19 @@
+Utilizar git para ver distintas etapas del proyecto,
+En rama main todo esta con react-router-dom v5
+
+react-app -> Carpeta con React-Router-Dom V6 basico
+
+============================================================
+
+Lazyload: Sirve para que no cargue toda la aplicacion y solo 
+ciertas partes, se puede dividir por chunks
+
+LazyLoad basico y sencillo
+
+git checkout lazyload-rrd-v6
+
+Lazyload con Rutas anidadas 
+
+git checkout lazyload-nested-rrd-v6
+
+============================================================

@@ -17,3 +17,8 @@ Lazyload con Rutas anidadas
 git checkout lazyload-nested-rrd-v6
 
 ============================================================
+
+En react-app-rrd-v5 es el template con react-router-dom v5 
+
+Al cambar de rama dentro de este template estara la carpeta del proyecto:
+-Compound Component Patterns 

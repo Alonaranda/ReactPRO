@@ -8,7 +8,7 @@ export const ShoopingPage = () => {
 
     return (
         <div>
-            <h1>Shoping Page</h1>
+            <h1>Shopping Page</h1>
             <hr />
             <ProductCard
                 key={product.id}

@@ -1,0 +1,89 @@
+{
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "url": "Debes crear un repo que almacenar tu codigo",
+    "type": "git"
+  },
+  "homepage": "https://alonaranda.com",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "test:watch": "tsdx test --watch"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "alonaranda-product-card",
+  "author": "Christian Alonso",
+  "module": "dist/alonaranda-product-card.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/alonaranda-product-card.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/alonaranda-product-card.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-jest": "^27.4.6",
+    "jest": "^27.4.7",
+    "react-test-renderer": "^17.0.2",
+    "@rollup/plugin-image": "^2.1.1",
+    "@size-limit/preset-small-lib": "^7.0.5",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-test-renderer": "^17.0.1",
+    "husky": "^7.0.4",
+    "postcss": "^8.4.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "size-limit": "^7.0.5",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "alonaranda"
+  ],
+  "dependencies": {},
+  "jest":{
+    "moduleNameMapper": {
+     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+     "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+   }
+}
+}

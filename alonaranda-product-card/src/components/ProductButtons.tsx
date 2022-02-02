@@ -5,8 +5,6 @@ import styles from '../styles/styles.module.css';
 
 
 export interface ProductButtonsProps {
-    // increaseBy: (value: number) => void;
-    // counter: number;
     className?: string;
     style?: CSSProperties
 }

@@ -2,6 +2,8 @@
 
 - Este es un paquete de pruebas de despliegue en NPM
 
+`Este paquete no sirve de nada, no lo instale, estoy aprendiendo sobre como manejar paquetes`
+
 ## Ejemplo
 
 `import {} from 'alonaranda-product-card`

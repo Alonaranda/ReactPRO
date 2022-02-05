@@ -18,15 +18,6 @@ export const Navigation = () => {
           <img src={logo} alt="React Logo" />
           <ul>
             <li>
-              <NavLink to="/" activeClassName="nav-active" exact>Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" activeClassName="nav-active" exact>About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/users" activeClassName="nav-active" exact>Users</NavLink>
-            </li>
-            <li>
               <NavLink to="/register" activeClassName="nav-active" exact>Register</NavLink>
             </li>
             <li>
@@ -49,15 +40,6 @@ export const Navigation = () => {
           </Route>
           <Route path="/register">
             <RegisterPage />
-          </Route>
-          <Route path="/about">
-            <h1>About</h1>
-          </Route>
-          <Route path="/users">
-            <h1>Users</h1>
-          </Route>
-          <Route path="/">
-            <h1>Home</h1>
           </Route>
         </Switch>
       </div>

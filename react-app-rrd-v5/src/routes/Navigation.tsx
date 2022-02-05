@@ -4,6 +4,8 @@ import {
   Route,
   NavLink
 } from 'react-router-dom';
+import { FormikBasicPage } from '../forms/pages/FormikBasicPage';
+import { FormikYupPage } from '../forms/pages/FormikYupPage';
 import { RegisterPage } from '../forms/pages/RegisterPage';
 
 import logo from '../logo.svg';
@@ -13,7 +15,7 @@ export const Navigation = () => {
     <Router>
       <div className="main-layout">
         <nav>
-            <img src={ logo } alt="React Logo" />
+          <img src={logo} alt="React Logo" />
           <ul>
             <li>
               <NavLink to="/" activeClassName="nav-active" exact>Home</NavLink>
@@ -27,13 +29,25 @@ export const Navigation = () => {
             <li>
               <NavLink to="/register" activeClassName="nav-active" exact>Register</NavLink>
             </li>
+            <li>
+              <NavLink to="/formik-basic" activeClassName="nav-active" exact>FormikBasic</NavLink>
+            </li>
+            <li>
+              <NavLink to="/formik-yup" activeClassName="nav-active" exact>FormikYup</NavLink>
+            </li>
           </ul>
         </nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-        <Route path="/register">
+          <Route path="/formik-yup">
+            <FormikYupPage />
+          </Route>
+          <Route path="/formik-basic">
+            <FormikBasicPage />
+          </Route>
+          <Route path="/register">
             <RegisterPage />
           </Route>
           <Route path="/about">

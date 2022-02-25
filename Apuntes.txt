@@ -17,3 +17,60 @@ Lazyload con Rutas anidadas
 git checkout lazyload-nested-rrd-v6
 
 ============================================================
+
+    Storybook
+ 
+ Empezar tu proyecto norma:
+    
+    npx create-react-app my-app --template typescript
+
+Agregar Storybook a tu proyecto:
+
+    npx sb init 
+
+Para correr:
+
+    npm run storybook 
+
+Modulos de CSS:
+
+https://www.npmjs.com/package/@storybook/addon-postcss
+
+    npm i @storybook/addon-postcss
+
+    npm i -D @storybook/addon-postcss postcss css-loader
+
+``` - .storybook/main.js
+
+addons: [
+  
+  {
+    name: '@storybook/addon-postcss',
+    options: {
+      postcssLoaderOptions: {
+        implementation: require('postcss'),
+      },
+    },
+  },
+  
+  ]
+}
+```
+
+
+``` - postcss.config.js
+module.exports = {
+  // Add your installed PostCSS plugins here:
+  plugins: [
+    // require('autoprefixer'),
+    // require('postcss-color-rebeccapurple'),
+  ],
+};
+```
+
+Para desplegar mi Storybook 
+
+1.- Necesito un servidor
+
+  npm i http-server
+

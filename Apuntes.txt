@@ -74,3 +74,72 @@ Para desplegar mi Storybook
 
   npm i http-server
 
+============================================================
+
+      Workbox
+Docs: 
+https://developers.google.com/web/tools/workbox/guides/generate-service-worker/cli
+https://developers.google.com/web/tools/workbox/modules/workbox-sw
+
+
+Instalar CLI de Workbox:
+
+  npm install workbox-cli --global
+
+Correr Wizard para una configuración fácil:\
+
+  workbox wizard
+
+Generar el Service Worker (Sin modificación en el Config)
+
+  workbox generateSW workbox-config.js
+
+Agregar en /public/index.html
+```
+    <script>
+      console.log('%NODE_ENV%');
+      const isProduction = ( '%NODE_ENV%' === 'production' );
+
+      if ( isProduction && 'serviceWorker' in navigator ) {
+        navigator.serviceWorker.register( 'sw.js' )
+      }
+    </script>
+```
+
+
+
+
+Para hacer configuraciones propias: 
+ 
+En /src/sw-template.js
+
+  /* eslint-disable no-undef */
+  importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.2.0/workbox-sw.js');
+  workbox.precaching.precacheAndRoute( __WB_MANIFEST );
+
+
+En /workbox-config.js agregar: 
+
+  module.exports = {
+	globDirectory: 'build/',
+	globPatterns: [
+		'**/*.{json,ico,html,png,txt,css,js}'
+	],
+	swDest: 'build/sw.js',
+	swSrc: 'src/sw-template.js',
+	injectionPoint: '__WB_MANIFEST'
+};
+
+
+Generar el Sw 
+
+  workbox injectManifest
+
+
+
+Workbox Background Sync - Eventos sin conexion 
+
+Hacen una cola de todo lo que se hizo sin conexion  
+
+
+

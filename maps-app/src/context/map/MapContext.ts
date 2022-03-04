@@ -1,5 +1,7 @@
-import { Map } from "mapbox-gl";
 import { createContext } from "react";
+//@ts-ignore
+//eslint-disable-next-line
+import { Map } from "!mapbox-gl";
 
 interface MapContextProps {
     isMapReady: boolean;

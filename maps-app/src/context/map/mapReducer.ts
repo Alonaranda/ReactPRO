@@ -1,5 +1,7 @@
 import { MapState } from "./MapProvider"
-import { Map, Marker } from "mapbox-gl"
+//@ts-ignore
+//eslint-disable-next-line
+import { Map, Marker } from "!mapbox-gl"
 
 
 type MapAction = 

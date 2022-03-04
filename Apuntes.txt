@@ -142,4 +142,4 @@ Workbox Background Sync - Eventos sin conexion
 Hacen una cola de todo lo que se hizo sin conexion  
 
 
-
+Yo te recomendaría que entiendas el comportamiento de la mayoria, y dependería de en cual te sientas más comodo, yo recomiendo usar css in js para que quede de lado de JS, pero dependerá del proyecto.
